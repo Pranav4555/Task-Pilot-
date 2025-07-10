@@ -1,9 +1,9 @@
-TaskPilot – Role-Based Task Management API
+#TaskPilot – Role-Based Task Management API
 A production-ready backend system built with FastAPI and PostgreSQL that supports secure task management, user collaboration with access roles, and productivity analytics.
 
 Live API Docs: https://task-pilot-i2ej.onrender.com/docs
 
-Tech Stack
+#Tech Stack
 Backend: FastAPI
 
 Database: PostgreSQL, SQLAlchemy ORM
@@ -14,13 +14,13 @@ Authorization: Role-Based Access Control (RBAC)
 
 Tools: Uvicorn, Docker, Pydantic, pgAdmin, Postman
 
-Key Features
+#Key Features
 Authentication & Authorization
 Secure user registration and login
 
 JWT-based token authentication for protected routes
 
-Role-based access control:
+#Role-based access control:
 
 Owner – Full control
 
@@ -28,28 +28,28 @@ Editor – Can update but not delete
 
 Viewer – Read-only
 
-Task Operations
+#Task Operations
 Create, read, update, delete tasks
 
 Share tasks with other users by assigning roles
 
 All task endpoints enforce permission checks
 
-Collaboration API
+#Collaboration API
 POST /tasks/{id}/share – Share a task and assign a role
 
 POST /tasks/{id}/unshare – Revoke access from a user
 
 GET /shared-tasks – View all tasks shared with the current user
 
-Analytics
+#Analytics
 Personal productivity insights
 
 GET /analytics/me/overview – Overview of total/completed/pending tasks
 
 GET /analytics/tasks/{id} – Task-specific activity logs
 
-Setup Instructions
+#Setup Instructions
 Clone the Repository
 
 git clone https://github.com/Pranav4555/taskpilot-backend.git
@@ -62,7 +62,7 @@ Create a .env file in the root directory:
 
 DATABASE_URL=postgresql://username:password@localhost/taskpilot
 SECRET_KEY=your-secret-key
-Run the Application
+#Run the Application
 
 uvicorn main:app --reload
 API Documentation
@@ -74,7 +74,7 @@ Owner   Yes	  Yes	    Yes
 Editor  Yes	  Yes   	No
 Viewer	Yes	  No	    No
 
-Docker Support
+#Docker Support
 You can containerize the project as follows:
 
 docker build -t taskpilot-app .
