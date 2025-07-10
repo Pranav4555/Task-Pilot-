@@ -52,46 +52,31 @@ GET /analytics/tasks/{id} – Task-specific activity logs
 Setup Instructions
 Clone the Repository
 
-bash
-Copy
-Edit
 git clone https://github.com/Pranav4555/taskpilot-backend.git
 cd taskpilot-backend
 Install Dependencies
 
-bash
-Copy
-Edit
 pip install -r requirements.txt
 Configure Environment
 Create a .env file in the root directory:
 
-env
-Copy
-Edit
 DATABASE_URL=postgresql://username:password@localhost/taskpilot
 SECRET_KEY=your-secret-key
 Run the Application
 
-bash
-Copy
-Edit
 uvicorn main:app --reload
 API Documentation
 Visit http://localhost:8000/docs for Swagger UI
 
 Role Matrix
-Role	Read	Update	Delete
-Owner	Yes	Yes	Yes
-Editor	Yes	Yes	No
-Viewer	Yes	No	No
+Role	  Read	Update	Delete
+Owner   Yes	  Yes	    Yes
+Editor  Yes	  Yes   	No
+Viewer	Yes	  No	    No
 
 Docker Support
 You can containerize the project as follows:
 
-bash
-Copy
-Edit
 docker build -t taskpilot-app .
 docker run -d -p 8000:8000 --env-file .env taskpilot-app
 Author
